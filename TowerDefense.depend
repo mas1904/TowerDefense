@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1446667742 source:c:\users\£ukasz\documents\c++\towerdefense\main.cpp
+1517944618 source:c:\users\£ukasz\documents\c++\towerdefense\main.cpp
+	<iostream>
 	<SFML/Graphics.hpp>
 
 1470642834 c:\sfml-2.4.0\include\sfml\graphics.hpp
@@ -388,4 +389,36 @@
 	<SFML/System/String.hpp>
 	<string>
 	<vector>
+
+1517948128 source:c:\users\£ukasz\documents\c++\towerdefense\src\tower.cpp
+	"Tower.h"
+
+1517949120 c:\users\£ukasz\documents\c++\towerdefense\include\tower.h
+	"GameObject.h"
+	"Weapon.h"
+
+1517949106 source:c:\users\£ukasz\documents\c++\towerdefense\src\gameobject.cpp
+	"GameObject.h"
+
+1517949434 c:\users\£ukasz\documents\c++\towerdefense\include\gameobject.h
+	<SFML/Graphics.hpp>
+	"HelperClasses.h"
+
+1517946786 c:\users\£ukasz\documents\c++\towerdefense\include\helperclasses.h
+
+1517946773 source:c:\users\£ukasz\documents\c++\towerdefense\src\helperclasses.cpp
+	"HelperClasses.h"
+
+1517948259 source:c:\users\£ukasz\documents\c++\towerdefense\src\ammo.cpp
+	"Ammo.h"
+
+1517949106 c:\users\£ukasz\documents\c++\towerdefense\include\ammo.h
+	"GameObject.h"
+
+1517949131 c:\users\£ukasz\documents\c++\towerdefense\include\weapon.h
+	"GameObject.h"
+	"Ammo.h"
+
+1517949416 source:c:\users\£ukasz\documents\c++\towerdefense\src\weapon.cpp
+	"Weapon.h"
 

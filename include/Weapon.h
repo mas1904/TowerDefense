@@ -1,31 +1,27 @@
-#ifndef TOWER_H
-#define TOWER_H
+#ifndef WEAPON_H
+#define WEAPON_H
 
 #include "GameObject.h"
-#include "Weapon.h"
+#include "Ammo.h"
 
-
-class Tower : public GameObject
+class Weapon : public GameObject
 {
     public:
         /** Default constructor */
-        Tower();
+        Weapon();
         /** Default destructor */
-        virtual ~Tower();
+        virtual ~Weapon();
 
         void setAngle( float angle );
         void turn( float angle );
+
         void shoot();
 
     protected:
 
     private:
-
-        Weapon weapon;
-
-
-
+        Ammo ammo;
 
 };
 
-#endif // TOWER_H
+#endif // WEAPON_H
