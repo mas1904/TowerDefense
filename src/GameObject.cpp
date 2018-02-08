@@ -2,21 +2,21 @@
 
 GameObject::GameObject()
 {
-    //ctor
+
 }
 
-GameObject::GameObject( int x, int y, const sf::Texture &txt )
+GameObject::GameObject( Point pos, const sf::Texture &txt ) :
+    position(pos)
 {
     sprite.setTexture( txt, true );
 
     std::cout << sprite.getLocalBounds().width << " " << std::endl;
     std::cout << txt.getSize().x<< " "  << std::endl;
 
-    position.x = x;
-    position.y = y;
+    radius = sprite.getTextureRect().width;  //TO DO change after making load enemies frm xml
+    sprite.setPosition(pos.x, pos.y);
 
-    sprite.setPosition(x, y);
-
+    sprite.setOrigin( sprite.getTextureRect().width/2 , sprite.getTextureRect().height/2 );
 
 }
 

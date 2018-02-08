@@ -2,6 +2,9 @@
 #include <SFML/Graphics.hpp>
 
 #include <iterator>
+#include <time.h>
+#include <math.h>
+
 #include "TextureHandler.h"
 #include "GameObjectHandler.h"
 #include "Tower.h"
@@ -29,26 +32,45 @@ class TableHandler : public GameObjectHandler{
 int main()
 {
     // Create the main window
-    sf::RenderWindow app(sf::VideoMode(800, 600), "SFML window");
+    sf::RenderWindow app(sf::VideoMode(1024, 720), "SFML window");
 
     // Load a sprite to display
 
 	TextureHandler textureHandler;
 
-	textureHandler.loadTexture( "test", "cb.bmp" );
+	textureHandler.loadTexture( "test", "cb.bmp" );    //TO DO loading from xml
+
+	textureHandler.loadTexture( "grass1", "grass.bmp" );    //TO DO loading from xml
+	textureHandler.loadTexture( "grass2", "grass2.bmp" );    //TO DO loading from xml
+	textureHandler.loadTexture( "grass3", "grass3.bmp" );    //TO DO loading from xml
+	textureHandler.loadTexture( "grass4", "grass4.bmp" );    //TO DO loading from xml
+
+	textureHandler.loadTexture( "turret1", "turret1.bmp" );    //TO DO loading from xml
+
+	const int num_of_grass_type = 4;
 
 	sf::Sprite sprite(textureHandler.getTexture( "test" ));
 
 
 	GameObjectHandler *gameObjectHandler = new TableHandler();
 
-	gameObjectHandler->add( GameObject( 250, 250, textureHandler.getTexture( "test" ) ) );
+	srand( time(NULL) );
 
-	gameObjectHandler->add( GameObject( 350, 250, textureHandler.getTexture( "test" ) ) );
+    string type = "grass";
+	for(int i=0; i<app.getSize().y/128 + 1;i++){
+        for(int j=0; j<app.getSize().x/128 + 1;j++){
+            int r = rand( ) % num_of_grass_type + 1;
+            gameObjectHandler->add( GameObject( Point(j*128, i*128), textureHandler.getTexture( type+to_string( r ) ) ) );
+        }
+	}
 
-	gameObjectHandler->add( GameObject( 250, 350, textureHandler.getTexture( "test" ) ) );
 
-	gameObjectHandler->add( GameObject( 350, 350, textureHandler.getTexture( "test" ) ) );
+	gameObjectHandler->add( GameObject( Point(128*3, 128*3), textureHandler.getTexture( "turret1" ) ) );
+
+	//gameObjectHandler->add( GameObject( Point(350, 250), textureHandler.getTexture( "test" ) ) );
+
+
+
 
 	// Start the game loop
 

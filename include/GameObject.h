@@ -11,9 +11,7 @@ class GameObject
     public:
         /** Default constructor */
         GameObject();
-        GameObject( int x,
-                   int y,
-                   const sf::Texture &txt );
+        GameObject( Point pos, const sf::Texture &txt );
         /** Default destructor */
         virtual ~GameObject();
 
@@ -27,7 +25,7 @@ class GameObject
 
         void turn( float angle );
 
-        virtual void action( float seconds ) { turn(100.0 * seconds); };
+        virtual void action( float seconds ) { };
 
         //function invoked on evry clock tick
         //virtual action( float seconds );
@@ -36,10 +34,10 @@ class GameObject
     protected:
 
     private:
-        Point position;
-        int radius;
+        Point position = Point(0,0);
+        int radius = 0;
 
-        float angle;
+        float angle = 0;
 
 
 };
