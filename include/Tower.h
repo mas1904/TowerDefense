@@ -13,8 +13,8 @@ class Tower : public GameObject
         /** Default destructor */
         virtual ~Tower();
 
-        void setAngle( float angle );
-        void turn( float angle );
+        void setWeaponAngle( float angle );
+        void turnWeapon( float angle );
         void shoot();
 
     protected:

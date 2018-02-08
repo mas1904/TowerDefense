@@ -15,7 +15,7 @@ Tower::~Tower()
   *
   * (documentation goes here)
   */
-void Tower::turn( float angle )
+void Tower::turnWeapon( float angle )
 {
     weapon.turn( angle );
 
@@ -26,7 +26,7 @@ void Tower::turn( float angle )
   *
   * (documentation goes here)
   */
-void Tower::setAngle( float angle )
+void Tower::setWeaponAngle( float angle )
 {
     weapon.setAngle( angle );
 

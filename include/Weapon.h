@@ -12,9 +12,6 @@ class Weapon : public GameObject
         /** Default destructor */
         virtual ~Weapon();
 
-        void setAngle( float angle );
-        void turn( float angle );
-
         void shoot();
 
     protected:

@@ -1,7 +1,11 @@
 # depslib dependency file v1.0
-1517944618 source:c:\users\£ukasz\documents\c++\towerdefense\main.cpp
+1518049077 source:c:\users\£ukasz\documents\c++\towerdefense\main.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
+	<iterator>
+	"TextureHandler.h"
+	"GameObjectHandler.h"
+	"Tower.h"
 
 1470642834 c:\sfml-2.4.0\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -390,17 +394,18 @@
 	<string>
 	<vector>
 
-1517948128 source:c:\users\£ukasz\documents\c++\towerdefense\src\tower.cpp
+1518031513 source:c:\users\£ukasz\documents\c++\towerdefense\src\tower.cpp
 	"Tower.h"
 
-1517949120 c:\users\£ukasz\documents\c++\towerdefense\include\tower.h
+1518045098 c:\users\£ukasz\documents\c++\towerdefense\include\tower.h
 	"GameObject.h"
 	"Weapon.h"
 
-1517949106 source:c:\users\£ukasz\documents\c++\towerdefense\src\gameobject.cpp
+1518049089 source:c:\users\£ukasz\documents\c++\towerdefense\src\gameobject.cpp
 	"GameObject.h"
 
-1517949434 c:\users\£ukasz\documents\c++\towerdefense\include\gameobject.h
+1518049148 c:\users\£ukasz\documents\c++\towerdefense\include\gameobject.h
+	<iostream>
 	<SFML/Graphics.hpp>
 	"HelperClasses.h"
 
@@ -415,10 +420,25 @@
 1517949106 c:\users\£ukasz\documents\c++\towerdefense\include\ammo.h
 	"GameObject.h"
 
-1517949131 c:\users\£ukasz\documents\c++\towerdefense\include\weapon.h
+1518031357 c:\users\£ukasz\documents\c++\towerdefense\include\weapon.h
 	"GameObject.h"
 	"Ammo.h"
 
-1517949416 source:c:\users\£ukasz\documents\c++\towerdefense\src\weapon.cpp
+1518031302 source:c:\users\£ukasz\documents\c++\towerdefense\src\weapon.cpp
 	"Weapon.h"
+
+1518046443 c:\users\£ukasz\documents\c++\towerdefense\include\texturehandler.h
+	<SFML/Graphics.hpp>
+	<map>
+	<iostream>
+
+1518048981 c:\users\£ukasz\documents\c++\towerdefense\include\gameobjecthandler.h
+	<vector>
+	"GameObject.h"
+
+1518036767 source:c:\users\£ukasz\documents\c++\towerdefense\src\gameobjecthandler.cpp
+	"GameObjectHandler.h"
+
+1518046556 source:c:\users\£ukasz\documents\c++\towerdefense\src\texturehandler.cpp
+	"TextureHandler.h"
 

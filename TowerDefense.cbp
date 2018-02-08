@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-graphics-d" />
@@ -27,6 +28,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -49,7 +51,17 @@
 			<Add directory="$(#sfml.lib)" />
 		</Linker>
 		<Unit filename="cb.bmp" />
+		<Unit filename="include/Ammo.h" />
+		<Unit filename="include/GameObject.h" />
+		<Unit filename="include/HelperClasses.h" />
+		<Unit filename="include/Tower.h" />
+		<Unit filename="include/Weapon.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Ammo.cpp" />
+		<Unit filename="src/GameObject.cpp" />
+		<Unit filename="src/HelperClasses.cpp" />
+		<Unit filename="src/Tower.cpp" />
+		<Unit filename="src/Weapon.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
